@@ -1,0 +1,70 @@
+---
+// Daftar URL Icon 3D yang stabil
+const icons = {
+  futsal: "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Soccer%20ball/3D/soccer_ball_3d.png",
+  gym: "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Dumbbell/3D/dumbbell_3d.png",
+  tennis: "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Tennis/3D/tennis_3d.png",
+  badminton: "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Badminton/3D/badminton_3d.png"
+};
+---
+
+<section id="facilities" class="px-5 md:px-10 py-24">
+  <div class="max-w-[1400px] mx-auto">
+    <div class="flex items-center gap-3 text-neon font-barlow-cond text-[0.75rem] font-bold tracking-[0.35em] uppercase mb-4">
+      <span class="w-[30px] h-[1px] bg-neon"></span> Fasilitas
+    </div>
+    <h2 class="font-bebas text-[clamp(3rem,7vw,6rem)] leading-[0.95] text-white section-reveal">
+      SEMUA ADA<br><span class="neon-text">DI SINI</span>
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px mt-16 section-reveal">
+      
+      <div class="group bg-card p-10 border border-neon/5 relative overflow-hidden transition-all hover:border-neon/30 hover:-translate-y-1">
+        <div class="absolute inset-0 bg-gradient-to-br from-neon/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <img src={icons.futsal} alt="Futsal Icon" class="w-16 h-16 mb-6 transition-transform group-hover:scale-110 object-contain" />
+        <div class="font-bebas text-[1.8rem] text-white tracking-wide">Futsal</div>
+        <div class="inline-block font-barlow-cond text-[0.7rem] font-bold tracking-widest uppercase text-neon bg-neon/5 px-2.5 py-1 mt-2.5">
+          FIFA Synthetic Grass
+        </div>
+        <p class="text-[0.85rem] text-white/40 mt-2.5 leading-relaxed">
+          Rumput sintetis FIFA standard. Bisa kasual maupun turnamen resmi.
+        </p>
+      </div>
+
+      <div class="group bg-card p-10 border border-neon/5 relative overflow-hidden transition-all hover:border-neon/30 hover:-translate-y-1">
+        <img src={icons.gym} alt="Gym Icon" class="w-16 h-16 mb-6 transition-transform group-hover:scale-110 object-contain" />
+        <div class="font-bebas text-[1.8rem] text-white tracking-wide">Gym Premium</div>
+        <div class="inline-block font-barlow-cond text-[0.7rem] font-bold tracking-widest uppercase text-neon bg-neon/5 px-2.5 py-1 mt-2.5">
+          Equipment Lengkap
+        </div>
+        <p class="text-[0.85rem] text-white/40 mt-2.5 leading-relaxed">
+          Peralatan cardio & strength terlengkap. AC full, locker room bersih.
+        </p>
+      </div>
+
+      <div class="group bg-card p-10 border border-neon/5 relative overflow-hidden transition-all hover:border-neon/30 hover:-translate-y-1">
+        <div class="absolute inset-0 bg-gradient-to-br from-neon/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+        <img src={icons.tennis} alt="Tennis Icon" class="w-16 h-16 mb-6 transition-transform group-hover:scale-110 object-contain" />
+        <div class="font-bebas text-[1.8rem] text-white tracking-wide">Tennis Court</div>
+        <div class="inline-block font-barlow-cond text-[0.7rem] font-bold tracking-widest uppercase text-neon bg-neon/5 px-2.5 py-1 mt-2.5">
+          Hard Court Surface
+        </div>
+        <p class="text-[0.85rem] text-white/40 mt-2.5 leading-relaxed">
+          Lapangan tennis standar internasional. Pencahayaan LED terang untuk main malam hari.
+        </p>
+      </div>
+
+      <div class="group bg-card p-10 border border-neon/5 relative overflow-hidden transition-all hover:border-neon/30 hover:-translate-y-1">
+        <img src={icons.badminton} alt="Badminton Icon" class="w-16 h-16 mb-6 transition-transform group-hover:scale-110 object-contain" />
+        <div class="font-bebas text-[1.8rem] text-white tracking-wide">Badminton</div>
+        <div class="inline-block font-barlow-cond text-[0.7rem] font-bold tracking-widest uppercase text-neon bg-neon/5 px-2.5 py-1 mt-2.5">
+          4 Lapangan
+        </div>
+        <p class="text-[0.85rem] text-white/40 mt-2.5 leading-relaxed">
+          Lantai vinyl anti-slip, net BWF standard, pencahayaan optimal.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>

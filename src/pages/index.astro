@@ -1,17 +1,89 @@
 ---
+import '@fontsource/bebas-neue';
+import '@fontsource/roboto/400.css'; // Berat 400
+import '@fontsource/roboto/700.css'; // Berat 700
 
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Facilities from '../components/Facilities.astro';
+import Pricing from '../components/Pricing.astro';
+import Booking from '../components/Booking.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Location from '../components/Location.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Arena X - Sport Center</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-dark text-[#E8EAF0] font-barlow overflow-x-hidden">
+
+	<Navbar />
+
+	<main>
+		<Hero />
+		<Facilities />
+		<Pricing />
+		<Booking />
+		<Testimonials />
+		<Location />
+		</main>
+	<Footer />	
+		
+		<script>
+        // Masukkan script IntersectionObserver kamu di sini
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section-reveal').forEach(s => observer.observe(s));
+    </script>
+
+	<style is:global>
+  @import "tailwindcss";
+
+  @theme {
+    --font-bebas: "Bebas Neue", system-ui;
+    --font-roboto: "Roboto", system-ui;
+  }
+
+  @theme {
+    /* Daftarkan warna custom kamu di sini agar dikenali sebagai utilitas */
+    --color-neon: #39ff14;
+    --color-neon-dim: #22cc0a;
+    --color-orange: #ff6b1a;
+    --color-dark: #080a0d;
+    --color-card: #0e1117;
+
+    /* Daftarkan font jika perlu */
+    --font-bebas: "Bebas Neue", sans-serif;
+    --font-barlow: "Barlow", sans-serif;
+    --font-barlow-cond: "Barlow Condensed", sans-serif;
+  }
+
+  /* CSS custom lainnya tetap di bawah @theme */
+  @layer components {
+    .btn-clip-nav {
+      @apply bg-neon text-dark font-bold px-[22px] py-[10px] transition-all;
+      clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    }
+    
+    .neon-text {
+      @apply text-neon;
+      text-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
+    }
+  }
+</style>
 	</body>
 </html>

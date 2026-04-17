@@ -1,0 +1,87 @@
+---
+// Jika nanti kamu ingin menggunakan foto asli, kamu tinggal ganti inisial dengan tag img
+
+---
+
+<section id="testimonials" class="px-5 md:px-10 py-24 bg-[#090c09] relative overflow-hidden">
+   
+
+    <div class="max-w-[1400px] mx-auto relative z-10">
+      <div class="flex items-center gap-3 text-neon font-barlow-cond text-[0.75rem] font-bold tracking-[0.35em] uppercase mb-4">
+        <span class="w-[30px] h-[1px] bg-neon"></span> Social Proof
+      </div>
+      <h2 class="font-bebas text-[clamp(3rem,7vw,6rem)] leading-[0.95] text-white section-reveal">
+        APA KATA<br><span class="neon-text">MEREKA</span>
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-16 section-reveal">
+        
+        <div class="bg-card border border-white/5 p-8 transition-all hover:border-neon/20 hover:-translate-y-1 group">
+          <div class="flex gap-1 mb-4">
+            {[1, 2, 3, 4, 5].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-yellow-500 shadow-yellow-500/20">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+            ))}
+          </div>
+          <p class="text-white/70 text-[0.95rem] leading-relaxed mb-6 italic">
+            "Lapangan sintetisnya mantap banget! Ga bikin lutut sakit, dan cahayanya pas buat malem. Tim gw udah langganan tiap minggu."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-neon to-neon-dim flex items-center justify-center font-bebas text-dark text-xl shadow-[0_0_15px_rgba(57,255,20,0.2)]">
+              R
+            </div>
+            <div>
+              <div class="font-barlow-cond font-bold text-white uppercase tracking-wide">Rizky Pratama</div>
+              <div class="text-white/35 text-[0.8rem]">Kapten Tim FC Karawang</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-card border border-white/5 p-8 transition-all hover:border-neon/20 hover:-translate-y-1 group">
+          <div class="flex gap-1 mb-4">
+            {[1, 2, 3, 4, 5].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-yellow-500">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+            ))}
+          </div>
+          <p class="text-white/70 text-[0.95rem] leading-relaxed mb-6 italic">
+            "Gym-nya lengkap parah. Peralatan baru semua, AC dingin, dan instrukturnya helpful. Worth it buat member bulanan!"
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-neon to-neon-dim flex items-center justify-center font-bebas text-dark text-xl shadow-[0_0_15px_rgba(57,255,20,0.2)]">
+              D
+            </div>
+            <div>
+              <div class="font-barlow-cond font-bold text-white uppercase tracking-wide">Diana Kusuma</div>
+              <div class="text-white/35 text-[0.8rem]">Fitness Enthusiast</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-card border border-white/5 p-8 transition-all hover:border-neon/20 hover:-translate-y-1 group">
+          <div class="flex gap-1 mb-4">
+            {[1, 2, 3, 4, 5].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-yellow-500">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+            ))}
+          </div>
+          <p class="text-white/70 text-[0.95rem] leading-relaxed mb-6 italic">
+            "Booking gampang banget! WhatsApp langsung dibalas, bayar transfer, beres. Cafenya juga enak buat nongkrong abis main."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-neon to-neon-dim flex items-center justify-center font-bebas text-dark text-xl shadow-[0_0_15px_rgba(57,255,20,0.2)]">
+              A
+            </div>
+            <div>
+              <div class="font-barlow-cond font-bold text-white uppercase tracking-wide">Agung Santoso</div>
+              <div class="text-white/35 text-[0.8rem]">Regular Player</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>

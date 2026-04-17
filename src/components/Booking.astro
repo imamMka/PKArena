@@ -1,0 +1,91 @@
+---
+// Tambahkan icon 3D baru untuk section booking
+const icons = {
+  clock: "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Mantelpiece%20clock/3D/mantelpiece_clock_3d.png",
+  phone: "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Telephone%20receiver/3D/telephone_receiver_3d.png",
+  whatsapp: "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Mobile%20phone/3D/mobile_phone_3d.png"
+};
+---
+
+<section id="booking" class="px-5 md:px-10 py-24">
+    <div class="max-w-[1400px] mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        
+        <div class="section-reveal">
+          <div class="flex items-center gap-3 text-neon font-barlow-cond text-[0.75rem] font-bold tracking-[0.35em] uppercase mb-4">
+            <span class="w-[30px] h-[1px] bg-neon"></span> Booking
+          </div>
+          <h2 class="font-bebas text-[clamp(3rem,7vw,6rem)] leading-[0.95] text-white">
+            GAMPANG,<br><span class="neon-text">LANGSUNG</span><br>BOOKING
+          </h2>
+          <p class="text-white/45 mt-6 leading-relaxed max-w-[380px]">
+            Isi form di samping, kita auto-redirect ke WhatsApp. Konfirmasi &lt; 5 menit. Gak ribet.
+          </p>
+
+          <div class="mt-10 space-y-2">
+            <div class="flex gap-4 py-5 border-b border-white/5 items-center">
+              <img src={icons.clock} alt="clock" class="w-8 h-8 object-contain" />
+              <div>
+                <div class="font-barlow-cond text-[0.75rem] font-bold tracking-widest uppercase text-neon mb-1">
+                  Jam Operasional
+                </div>
+                <div class="text-[0.95rem] text-white/70">24 Jam · 7 Hari</div>
+              </div>
+            </div>
+            
+            <div class="flex gap-4 py-5 border-b border-white/5 items-center">
+              <img src={icons.phone} alt="phone" class="w-8 h-8 object-contain" />
+              <div>
+                <div class="font-barlow-cond text-[0.75rem] font-bold tracking-widest uppercase text-neon mb-1">
+                  WhatsApp
+                </div>
+                <div class="text-[0.95rem] text-white/70">+62 812-3456-7890</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-card border border-neon/10 p-10 md:p-12 section-reveal">
+          <div class="font-bebas text-[1.8rem] text-white mb-8 tracking-wide">BOOKING FORM</div>
+          <form class="space-y-5">
+            <div>
+              <label class="block font-barlow-cond text-[0.8rem] font-semibold tracking-widest uppercase text-white/50 mb-2">Nama Kamu</label>
+              <input type="text" placeholder="Bro / Sis / Tim..." class="w-full bg-white/5 border border-neon/15 text-white px-4 py-3.5 outline-none focus:border-neon transition-colors">
+            </div>
+            
+            <div>
+              <label class="block font-barlow-cond text-[0.8rem] font-semibold tracking-widest uppercase text-white/50 mb-2">Fasilitas</label>
+              <div class="relative">
+                <select class="w-full bg-white/5 border border-neon/15 text-white px-4 py-3.5 outline-none focus:border-neon transition-colors appearance-none cursor-pointer">
+                  <option class="bg-card">Futsal Arena</option>
+                  <option class="bg-card">Gym Premium</option>
+                  <option class="bg-card">Badminton Court</option>
+                  <option class="bg-card">Tennis Court</option>
+                </select>
+                <div class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-neon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block font-barlow-cond text-[0.8rem] font-semibold tracking-widest uppercase text-white/50 mb-2">Tanggal</label>
+                <input type="date" class="w-full bg-white/5 border border-neon/15 text-white px-4 py-3.5 outline-none focus:border-neon [color-scheme:dark]">
+              </div>
+              <div>
+                <label class="block font-barlow-cond text-[0.8rem] font-semibold tracking-widest uppercase text-white/50 mb-2">Jam</label>
+                <input type="time" class="w-full bg-white/5 border border-neon/15 text-white px-4 py-3.5 outline-none focus:border-neon [color-scheme:dark]">
+              </div>
+            </div>
+
+            <button type="button" class="group w-full bg-neon text-dark font-bebas text-2xl tracking-widest py-4 mt-4 hover:bg-white transition-all shadow-[0_0_30px_rgba(57,255,20,0.3)] flex items-center justify-center gap-3">
+              <img src={icons.whatsapp} alt="wa" class="w-7 h-7 object-contain" />
+              BOOK VIA WHATSAPP
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+</section>

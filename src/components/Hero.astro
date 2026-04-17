@@ -1,0 +1,66 @@
+---
+// Jika kamu menggunakan Astro, kamu bisa menyimpan URL ini di variabel agar rapi
+const icons = {
+  whatsapp: "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Mobile%20phone%20with%20arrow/3D/mobile_phone_with_arrow_3d.png",
+  warning: "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/High%20voltage/3D/high_voltage_3d.png"
+};
+---
+
+<section id="hero" class="min-h-screen flex items-center relative overflow-hidden px-5 md:px-10 pt-[120px] pb-20">
+    <div class="absolute inset-0 z-0 bg-[#080A0D]" style="background: radial-gradient(ellipse 60% 70% at 70% 50%,rgba(57,255,20,0.08) 0%,transparent 70%), 
+                                   radial-gradient(ellipse 40% 50% at 20% 80%,rgba(255,107,26,0.06) 0%,transparent 60%),
+                                   linear-gradient(180deg,#080A0D 0%,#0a0f0a 100%)">
+    </div>
+
+    <div class="max-w-[1400px] mx-auto relative z-10 w-full">
+      <div class="flex items-center gap-3 text-neon font-barlow-cond text-[0.8rem] font-bold tracking-[0.3em] uppercase mb-5 animate-fade-up">
+        <span class="w-10 h-[1px] bg-neon"></span> Sport Center Premium · Karawang
+      </div>
+
+      <h1 class="font-bebas text-[clamp(4rem,10vw,10rem)] leading-[0.9] text-white animate-fade-up [animation-delay:0.1s]">
+        SPORT<br>CENTER<br><span class="text-neon">KARAWANG</span>
+      </h1>
+
+      <p class="font-barlow-cond text-lg md:text-xl text-white/55 tracking-wide max-w-[480px] my-10 leading-relaxed animate-fade-up [animation-delay:0.2s]">
+        Booking lapangan, gym, dan fasilitas premium — semuanya dalam 1 tempat. Open 24 jam.
+      </p>
+
+      <div class="flex flex-wrap gap-4 items-center animate-fade-up [animation-delay:0.3s]">
+        <a href="https://wa.me/6281234567890" target="_blank" class="btn-clip-nav group flex items-center gap-3">
+          <img src={icons.whatsapp} alt="phone" class="w-6 h-6 object-contain" />
+          <span>Book via WhatsApp</span>
+        </a>
+        
+        <a href="#facilities" class=" flex flex-row items-centerfont-barlow-cond font-semibold tracking-widest uppercase text-white/60 hover:text-white border-b border-white/20 hover:border-white py-4 transition-all">
+          Lihat Fasilitas 
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+            <path d="M5 12h14"></path>
+            <path d="m12 5 7 7-7 7"></path>
+         </svg>
+        </a>
+      </div>
+
+      <div class="mt-12 inline-flex items-center gap-4 bg-orange/10 border border-orange/30 px-5 py-3 animate-fade-up [animation-delay:0.4s]">
+        <div class="w-2 h-2 bg-orange rounded-full animate-pulse-slow"></div>
+        <img src={icons.warning} alt="warning" class="w-5 h-5 object-contain" />
+        <span class="font-barlow-cond text-[0.9rem] font-bold text-orange tracking-wide">
+          Weekend hampir full — sisa 3 slot hari ini!
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 mt-20 border-y border-neon/10 section-reveal">
+        <div class="p-10 border-r border-neon/10 last:border-r-0">
+          <div class="font-bebas text-[3.5rem] leading-none text-neon">6+</div>
+          <div class="font-barlow-cond text-[0.8rem] tracking-[0.2em] uppercase text-white/40 mt-1">Fasilitas Tersedia</div>
+        </div>
+        <div class="p-10 border-r border-neon/10 last:border-r-0">
+          <div class="font-bebas text-[3.5rem] leading-none text-neon">2K+</div>
+          <div class="font-barlow-cond text-[0.8rem] tracking-[0.2em] uppercase text-white/40 mt-1">Member Aktif</div>
+        </div>
+        <div class="p-10 border-r border-neon/10 last:border-r-0">
+          <div class="font-bebas text-[3.5rem] leading-none text-neon">24/7</div>
+          <div class="font-barlow-cond text-[0.8rem] tracking-[0.2em] uppercase text-white/40 mt-1">Open Setiap Hari</div>
+        </div>
+      </div>
+    </div>
+</section>
