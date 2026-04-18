@@ -1,122 +1,519 @@
 ---
 const icons = {
   fire: "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Fire/3D/fire_3d.png",
-  timer: "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Hourglass指标/3D/hourglass_done_3d.png",
-  crown: "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Crown/3D/crown_3d.png"
+  timer:
+    "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Hourglass指标/3D/hourglass_done_3d.png",
+  crown:
+    "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Crown/3D/crown_3d.png",
+};
+
+const admin = "621219118993";
+
+const getWaLink = (paket: string) => {
+  const message = `Halo Admin, saya tertarik untuk booking paket *${paket}*. Mohon info ketersediaan slotnya. Terima kasih!`;
+  return `https://wa.me/${admin}?text=${encodeURIComponent(message)}`;
 };
 ---
 
-<section id="pricing" class="px-5 md:px-10 py-24 bg-gradient-to-b from-dark to-[#090c09] relative border-t border-neon/20">
+<section
+  id="pricing"
+  class="px-5 md:px-10 py-24 bg-gradient-to-b from-dark to-[#090c09] relative border-t border-neon/20"
+>
   <div class="max-w-[1400px] mx-auto">
-    <div class="flex items-center gap-3 text-neon font-barlow-cond text-[0.75rem] font-bold tracking-[0.35em] uppercase mb-4">
+    <div
+      class="flex items-center gap-3 text-neon font-barlow-cond text-[0.75rem] font-bold tracking-[0.35em] uppercase mb-4"
+    >
       <span class="w-[30px] h-[1px] bg-neon"></span> Harga
     </div>
-    <h2 class="font-bebas text-[clamp(3rem,7vw,6rem)] leading-[0.95] text-white section-reveal">PILIH PAKET<br><span class="neon-text">KAMU</span></h2>
+    <h2
+      class="font-bebas text-[clamp(3rem,7vw,6rem)] leading-[0.95] text-white section-reveal"
+    >
+      PILIH PAKET<br /><span class="neon-text">KAMU</span>
+    </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-16 section-reveal">
-      
-      <div class="group bg-card border border-neon/10 p-10 transition-all hover:border-neon/40 hover:-translate-y-2">
-        <div class="font-barlow-cond text-[0.8rem] font-bold tracking-[0.2em] uppercase text-white/40">Weekday</div>
+      <div
+        class="flex flex-col justify-between group bg-card border border-neon/10 p-10 transition-all hover:border-neon/40 hover:-translate-y-2"
+      >
+        <div
+          class="font-barlow-cond text-[0.8rem] font-bold tracking-[0.2em] uppercase text-white/40"
+        >
+          Weekday Gym Package
+        </div>
         <div class="font-bebas text-[4.5rem] leading-none text-white my-2">
           <span class="text-[1.5rem] text-white/40">Rp</span>120K
         </div>
-        <div class="font-barlow-cond text-[0.9rem] text-white/40 tracking-wide mb-7 italic">per jam  Senin  Jumat</div>
-        
+        <div
+          class="font-barlow-cond text-[0.9rem] text-white/40 tracking-wide mb-7 italic"
+        >
+          per jam Senin-Jumat
+        </div>
+
         <ul class="space-y-3 text-white/60 text-[0.9rem]">
           <li class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-            Akses lapangan penuh
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
+            Akses Gym penuh
           </li>
           <li class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
             Locker room & Shower
           </li>
           <li class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
             Parkir luas gratis
           </li>
         </ul>
 
-        <a href="#" class="flex items-center justify-center gap-2 mt-8 p-3.5 border border-neon/30 text-neon font-barlow-cond font-bold uppercase tracking-widest hover:bg-neon/10 transition-all">
-          Book Weekday
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+        <a
+          href={getWaLink("Weekday Gym Package (120K)")}
+          class="flex items-center justify-center gap-2 mt-8 p-3.5 border border-neon/30 text-neon font-barlow-cond font-bold uppercase tracking-widest hover:bg-neon/10 transition-all"
+        >
+          Book Gym Package 1
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform group-hover:translate-x-1"
+          >
             <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
           </svg>
         </a>
       </div>
 
-      <div class="group bg-card border-2 border-neon p-10 relative shadow-[0_0_40px_rgba(57,255,20,0.15)] transition-all hover:-translate-y-2">
-        <div class="absolute top-0 right-0 bg-neon text-dark font-barlow-cond text-[0.7rem] font-bold px-3 py-1.5 tracking-wider flex items-center gap-1.5">
+      <div
+        class="flex flex-col justify-between group bg-card border-2 border-neon p-10 relative shadow-[0_0_40px_rgba(57,255,20,0.15)] transition-all hover:-translate-y-2"
+      >
+        <div
+          class="absolute top-0 right-0 bg-neon text-dark font-barlow-cond text-[0.7rem] font-bold px-3 py-1.5 tracking-wider flex items-center gap-1.5"
+        >
           <img src={icons.fire} alt="fire" class="w-3.5 h-3.5 object-contain" />
           BEST SELLER
         </div>
-        <div class="bg-orange/10 border border-orange/20 text-orange font-barlow-cond text-[0.75rem] font-bold px-2.5 py-1 mb-5 inline-flex items-center gap-2">
+        <div
+          class="w-fit bg-orange/10 border border-orange/20 text-orange font-barlow-cond text-[0.75rem] font-bold px-2.5 py-1 mb-5 inline-flex items-center gap-2"
+        >
           <img src={icons.timer} alt="timer" class="w-4 h-4 object-contain" />
           LIMITED SLOTS
         </div>
-        <div class="font-barlow-cond text-[0.8rem] font-bold tracking-[0.2em] uppercase text-white/40">Weekend</div>
+        <div
+          class="font-barlow-cond text-[0.8rem] font-bold tracking-[0.2em] uppercase text-white/40"
+        >
+          Weekend Gym Package
+        </div>
         <div class="font-bebas text-[4.5rem] leading-none text-white my-2">
           <span class="text-[1.5rem] text-white/40">Rp</span>180K
         </div>
-        <div class="font-barlow-cond text-[0.9rem] text-white/40 tracking-wide mb-7 italic">per jam  Sabtu  Minggu</div>
+        <div
+          class="font-barlow-cond text-[0.9rem] text-white/40 tracking-wide mb-7 italic"
+        >
+          per jam Sabtu-Minggu
+        </div>
 
         <ul class="space-y-3 text-white/60 text-[0.9rem]">
           <li class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
             Semua Fitur Weekday
           </li>
           <li class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
             Locker Premium
           </li>
           <li class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
             1 Minuman Gratis
           </li>
         </ul>
 
-        <a href="#" class="flex items-center justify-center gap-2 mt-8 p-3.5 bg-neon text-dark font-barlow-cond font-bold uppercase tracking-widest hover:bg-white transition-all">
-          Book Weekend
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+        <a
+          href={getWaLink("Weekend Gym Package (180K)")}
+          class="flex items-center justify-center gap-2 mt-8 p-3.5 bg-neon text-dark font-barlow-cond font-bold uppercase tracking-widest hover:bg-white transition-all"
+        >
+          Book Weekend Gym Package
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform group-hover:translate-x-1"
+          >
             <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
           </svg>
         </a>
       </div>
 
-      <div class="group bg-card border border-neon/10 p-10 transition-all hover:border-neon/40 hover:-translate-y-2">
-        <div class="bg-white/5 border border-white/10 text-white font-barlow-cond text-[0.75rem] font-bold px-2.5 py-1 mb-5 inline-flex items-center gap-2">
+      <div
+        class="flex flex-col justify-between group bg-card border border-neon/10 p-10 transition-all hover:border-neon/40 hover:-translate-y-2"
+      >
+        <div
+          class="w-fit bg-white/5 border border-white/10 text-white font-barlow-cond text-[0.75rem] font-bold px-2.5 py-1 mb-5 inline-flex items-center gap-2"
+        >
           <img src={icons.crown} alt="member" class="w-4 h-4 object-contain" />
           VIP ACCESS
         </div>
-        <div class="font-barlow-cond text-[0.8rem] font-bold tracking-[0.2em] uppercase text-white/40">Monthly Member</div>
+        <div
+          class="font-barlow-cond text-[0.8rem] font-bold tracking-[0.2em] uppercase text-white/40"
+        >
+          Monthly Member
+        </div>
         <div class="font-bebas text-[4.5rem] leading-none text-white my-2">
           <span class="text-[1.5rem] text-white/40">Rp</span>599K
         </div>
-        <div class="font-barlow-cond text-[0.9rem] text-white/40 tracking-wide mb-7 italic">per bulan  All Access</div>
+        <div
+          class="font-barlow-cond text-[0.9rem] text-white/40 tracking-wide mb-7 italic"
+        >
+          per bulan All Access
+        </div>
 
         <ul class="space-y-3 text-white/60 text-[0.9rem]">
           <li class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-            Diskon 20% Booking
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
+            Diskon 10% untuk semua booking lapangan
           </li>
           <li class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
             Gym Unlimited
           </li>
           <li class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
             Priority Booking
           </li>
         </ul>
 
-        <a href="#" class="flex items-center justify-center gap-2 mt-8 p-3.5 border border-neon/30 text-neon font-barlow-cond font-bold uppercase tracking-widest hover:bg-neon/10 transition-all">
+        <a
+          href={getWaLink("VIP ACCESS (599K)")}
+          class="flex items-center justify-center gap-2 mt-8 p-3.5 border border-neon/30 text-neon font-barlow-cond font-bold uppercase tracking-widest hover:bg-neon/10 transition-all"
+        >
           Daftar Member
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform group-hover:translate-x-1"
+          >
             <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
           </svg>
         </a>
       </div>
 
+      <div
+        class="flex flex-col justify-between group bg-card border border-neon/10 p-10 transition-all hover:border-neon/40 hover:-translate-y-2"
+      >
+        <div
+          class="font-barlow-cond text-[0.8rem] font-bold tracking-[0.2em] uppercase text-white/40"
+        >
+          Futsal Court
+        </div>
+        <div class="font-bebas text-[4.5rem] leading-none text-white my-2">
+          <span class="text-[1.5rem] text-white/40">Rp</span>50K
+        </div>
+        <div
+          class="font-barlow-cond text-[0.9rem] text-white/40 tracking-wide mb-7 italic"
+        >
+          per jam Senin-Jumat
+        </div>
+
+        <ul class="space-y-3 text-white/60 text-[0.9rem]">
+          <li class="flex items-center gap-2">
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
+            Akses lapangan penuh
+          </li>
+
+          <li class="flex items-center gap-2">
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
+            Parkir luas gratis
+          </li>
+        </ul>
+
+        <a
+          href="#booking"
+          class="flex items-center justify-center gap-2 mt-8 p-3.5 border border-neon/30 text-neon font-barlow-cond font-bold uppercase tracking-widest hover:bg-neon/10 transition-all"
+        >
+          Book Futsal Court
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform group-hover:translate-x-1"
+          >
+            <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+
+      <div
+        class="flex flex-col justify-between group bg-card border border-neon/10 p-10 transition-all hover:border-neon/40 hover:-translate-y-2"
+      >
+        <div
+          class="font-barlow-cond text-[0.8rem] font-bold tracking-[0.2em] uppercase text-white/40"
+        >
+          Badminton Court
+        </div>
+        <div class="font-bebas text-[4.5rem] leading-none text-white my-2">
+          <span class="text-[1.5rem] text-white/40">Rp</span>35K
+        </div>
+        <div
+          class="font-barlow-cond text-[0.9rem] text-white/40 tracking-wide mb-7 italic"
+        >
+          per jam Senin-Jumat
+        </div>
+
+        <ul class="space-y-3 text-white/60 text-[0.9rem]">
+          <li class="flex items-center gap-2">
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
+            Akses lapangan penuh
+          </li>
+
+          <li class="flex items-center gap-2">
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
+            Parkir luas gratis
+          </li>
+        </ul>
+
+        <a
+          href="#booking"
+          class="flex items-center justify-center gap-2 mt-8 p-3.5 border border-neon/30 text-neon font-barlow-cond font-bold uppercase tracking-widest hover:bg-neon/10 transition-all"
+        >
+          Book Badminton Court
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform group-hover:translate-x-1"
+          >
+            <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+
+      <div
+        class="flex flex-col justify-between group bg-card border border-neon/10 p-10 transition-all hover:border-neon/40 hover:-translate-y-2"
+      >
+        <div
+          class="font-barlow-cond text-[0.8rem] font-bold tracking-[0.2em] uppercase text-white/40"
+        >
+          Tennis Court
+        </div>
+        <div class="font-bebas text-[4.5rem] leading-none text-white my-2">
+          <span class="text-[1.5rem] text-white/40">Rp</span>100K
+        </div>
+        <div
+          class="font-barlow-cond text-[0.9rem] text-white/40 tracking-wide mb-7 italic"
+        >
+          per jam Senin-Jumat
+        </div>
+
+        <ul class="space-y-3 text-white/60 text-[0.9rem]">
+          <li class="flex items-center gap-2">
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
+            Akses lapangan penuh
+          </li>
+
+          <li class="flex items-center gap-2">
+            <svg
+              class="w-4 h-4 text-neon"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+                d="M5 13l4 4L19 7"></path></svg
+            >
+            Parkir luas gratis
+          </li>
+        </ul>
+
+        <a
+          href="#booking"
+          class="flex items-center justify-center gap-2 mt-8 p-3.5 border border-neon/30 text-neon font-barlow-cond font-bold uppercase tracking-widest hover:bg-neon/10 transition-all"
+        >
+          Book Tennis Court
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="transition-transform group-hover:translate-x-1"
+          >
+            <path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
